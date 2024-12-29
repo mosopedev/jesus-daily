@@ -16,7 +16,7 @@
         <div class="our-shows">
             <p class="shows-cta">NOW STREAMING</p>
             <div class="show" data-aos="fade-right">
-                <img src="/images/programs-summit.jpeg" class="float-bg-right" alt="">
+                <img src="" class="float-bg-right" alt="">
                 <div class="show-overlay float-overlay-left">
                     <div class="overlay-txt-sect">
                         <h2>Trivia Game Show</h2>
