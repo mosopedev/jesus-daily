@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 /*-For Set Blank Layout-*/
 definePageMeta({
   layout: "blank",
@@ -12,10 +12,10 @@ definePageMeta({
                     <v-card rounded="md" elevation="10" class="px-sm-1 px-0 withbg mx-auto" max-width="500">
                         <v-card-item class="pa-sm-8">
                             <div class="d-flex justify-center py-4">
-                                <!-- <LayoutFullLogo /> -->
+                                <LayoutFullLogo />
                             </div>
                             <div class="text-body-1 text-muted text-center mb-3">Your Social Campaigns</div>
-                            <!-- <AuthLoginForm /> -->
+                            <AuthLoginForm />
                             <h6 class="text-h6 text-muted font-weight-medium d-flex justify-center align-center mt-3">
                                 New to Modernize?
                                 <NuxtLink to="/auth/register"
@@ -28,4 +28,24 @@ definePageMeta({
             </v-row>
         </v-container>
     </div>
+</template> -->
+
+<template>
+    <div>
+
+    </div>
 </template>
+
+<script>
+export default {
+    setup () {
+        
+
+        return {}
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>
