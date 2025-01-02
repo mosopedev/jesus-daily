@@ -439,4 +439,74 @@ const currentHoverElem = ref()
 .platform img {
     width: 32px;
 }
+
+
+@media screen and (max-width: 1200px) {
+    .hero-text-content {
+        width: 90%;
+    }
+
+    .episode {
+        width: 250px;
+        height: 400px;
+        margin: 10px;
+    }
+
+    .episode:first-of-type {
+        transform: rotate(0deg)
+    }
+
+    .episode:last-of-type {
+        transform: rotate(0deg)
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .hero-text-content h1 {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .hero-text-content h1 {
+        font-size: 50px;
+    }
+
+    .hero-description {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .green-round-btn {
+        font-size: 20px;
+    }
+    .green-pill {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero-text-content h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .hero-description {
+        width: 95%;
+        font-size: 18px;
+    }
+
+    .hero-text-content {
+        width: 100%;
+        margin: 20vh auto 20vh;
+    }
+
+    .green-round-btn {
+        font-size: 18px;
+    }
+    .green-pill {
+        font-size: 16px;
+    }
+}
 </style>

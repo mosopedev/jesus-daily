@@ -275,7 +275,7 @@ const play = async () => {
 }
 
 .studio-name p {
-    font-family: 'ClashDisplay-Semibold';
+    font-family: 'ClashDisplay-Bold';
     font-style: normal;
     font-weight: 600;
     font-size: clamp(1rem, 8vw, 7.5rem);

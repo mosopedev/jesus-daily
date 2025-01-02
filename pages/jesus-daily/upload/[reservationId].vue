@@ -163,12 +163,12 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 90vh;
+    min-height: 90vh;
     background-color: #00bf63;
 }
 
 .modal {
-    width: 60%;
+    width: 70%;
     padding: 20px;
     min-height: 70vh;
     height: fit-content;
@@ -303,5 +303,70 @@ ul {
   margin-top: 10px;
   list-style: none;
   padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal {
+    /* flex-direction: column; */
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .modal {
+    flex-direction: column;
+    height: fit-content;
+    margin: 5vh 0;
+    padding: 10px;
+  }
+  .no-devotional-msg {
+    width: 100%;
+    font-size: 16px;
+  }
+  .devotion-content {
+  width: 90%;
+  border-right: none;
+  margin: auto;
+}
+
+.calendar-top {
+  width: 90%;
+  /* margin: auto;  */
+  margin: 5vh auto 0;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .modal {
+    /* flex-direction: column; */
+    width: 95%;
+  }
+  .devotional-schedule {
+  gap: 10px;
+  width: 100%;
+}
+.devotion-content {
+  width: 100%;
+}
+.calendar-top {
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reserver-modal {
+  width: 90%;
+}
+
+.calendar-bottom {
+  width: 100%;
+}
+
+.calendar-bottom .legend {
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 15px;
+}
 }
 </style>

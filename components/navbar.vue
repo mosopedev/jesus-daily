@@ -77,7 +77,7 @@ function toggleMenu() {
 }
 
 .nav-items {
-    margin-right: 30px;
+    /* margin-right: 30px; */
 }
 
 .nav-items a {
@@ -161,6 +161,8 @@ function toggleMenu() {
 .mobile-nav-links .nav-items a {
     /* font-size: 20px; */
     color: #fff;
+    margin: 0;
+    text-align: center;
 }
 
 .mobile-nav-links .nav-items a:last-of-type {
@@ -198,10 +200,6 @@ function toggleMenu() {
 
     .nav-logo {
         width: 110px;
-    }
-
-    .green-round-btn {
-        display: none;
     }
 
     .hamburger-menu div {

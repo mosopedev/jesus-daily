@@ -17,13 +17,15 @@
                         Lead a devotional
                     </button>
                 </NuxtLink>
-            </div> 
+            </div>
         </div>
         <div class="featured-episodes-sect">
             <!-- <h2>FEATURED EPISODES</h2> -->
             <div class="featured-episodes">
                 <div class="episode" @mouseover="currentHoverElem = 1" @mouseout="currentHoverElem = ''">
-                    <video class="episode-bg" src="https://res.cloudinary.com/knjbnf-jbdusn/video/upload/v1735448227/Figtree%20Studios/abbzsaetsu7denssso6q.mp4" autoplay loop muted></video>
+                    <video class="episode-bg"
+                        src="https://res.cloudinary.com/knjbnf-jbdusn/video/upload/v1735448227/Figtree%20Studios/abbzsaetsu7denssso6q.mp4"
+                        autoplay loop muted></video>
                     <div class="episode-overlay">
                         <div :class="['episode-preview', currentHoverElem == 1 ? 'move-up' : '']">
                             <p>2 Corinthians 5:17</p>
@@ -38,7 +40,9 @@
                     </div>
                 </div>
                 <div class="episode" @mouseover="currentHoverElem = 2" @mouseout="currentHoverElem = ''">
-                    <video class="episode-bg" src="https://res.cloudinary.com/knjbnf-jbdusn/video/upload/v1735448227/Figtree%20Studios/kg3ocsbzmywnqnr6qaad.mp4" autoplay loop muted></video>
+                    <video class="episode-bg"
+                        src="https://res.cloudinary.com/knjbnf-jbdusn/video/upload/v1735448227/Figtree%20Studios/kg3ocsbzmywnqnr6qaad.mp4"
+                        autoplay loop muted></video>
                     <div class="episode-overlay">
 
                         <div :class="['episode-preview', currentHoverElem == 2 ? 'move-up' : '']">
@@ -54,7 +58,9 @@
                     </div>
                 </div>
                 <div class="episode" @mouseover="currentHoverElem = 3" @mouseout="currentHoverElem = ''">
-                    <video class="episode-bg" src="https://res.cloudinary.com/knjbnf-jbdusn/video/upload/v1735448227/Figtree%20Studios/k8r9zuj2tnqf2zjmhkkt.mp4" autoplay loop muted></video>
+                    <video class="episode-bg"
+                        src="https://res.cloudinary.com/knjbnf-jbdusn/video/upload/v1735448227/Figtree%20Studios/k8r9zuj2tnqf2zjmhkkt.mp4"
+                        autoplay loop muted></video>
                     <div class="episode-overlay">
 
                         <div :class="['episode-preview', currentHoverElem == 3 ? 'move-up' : '']">
@@ -180,10 +186,8 @@ const currentHoverElem = ref()
     color: #00bf63;
 }
 
-
-
 .hero-text-content h1 {
-    color: var(--Color-Grey-100, #1a1a1a);
+    color: #1a1a1a;
     text-align: center;
     font-size: 64px;
     font-style: normal;
@@ -212,6 +216,7 @@ const currentHoverElem = ref()
     width: 100%;
     /* background-color: rebeccapurple; */
 }
+
 .podcast-cta {
     margin-top: 20vh;
 }
@@ -224,9 +229,7 @@ const currentHoverElem = ref()
     font-size: 20px;
     font-weight: 500;
     text-transform: capitalize;
-
 }
-
 
 .featured-episodes {
     display: flex;
@@ -393,5 +396,82 @@ const currentHoverElem = ref()
 .cta-join-text {
     font-size: 22px;
     font-family: "poppins";
+}
+
+@media screen and (max-width: 1200px) {
+    .hero-text-content {
+        width: 90%;
+    }
+
+    .episode {
+        width: 250px;
+        height: 400px;
+        margin: 10px;
+    }
+
+    .episode:first-of-type {
+        transform: rotate(0deg)
+    }
+
+    .episode:last-of-type {
+        transform: rotate(0deg)
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .hero-text-content h1 {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .hero-text-content h1 {
+        font-size: 50px;
+    }
+
+    .hero-description {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .green-round-btn {
+        font-size: 20px;
+    }
+
+    .cta-join-text {
+        font-size: 20px;
+    }
+    .green-pill {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero-text-content h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .hero-description {
+        width: 95%;
+        font-size: 18px;
+    }
+
+    .hero-text-content {
+        width: 100%;
+        margin: 20vh auto 20vh;
+    }
+
+    .green-round-btn {
+        font-size: 18px;
+    }
+
+    .cta-join-text {
+        font-size: 16px;
+    }
+    .green-pill {
+        font-size: 16px;
+    }
 }
 </style>
