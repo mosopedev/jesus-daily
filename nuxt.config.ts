@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   css: ["~/assets/css/global.css"],
-  compatibilityDate: "2024-07-13"
+  compatibilityDate: "2024-07-13",
+  plugins: ["~/plugins/vue-toast.js", ],
 })

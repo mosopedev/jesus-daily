@@ -90,4 +90,31 @@ footer {
     font-weight: 500;
     color: #767676;
 }
+
+@media screen and (max-width: 500px) {
+    footer {
+        margin-top: 10vh;
+    }
+    .top-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-socials {
+        gap: 10px;
+    }
+    .mid-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .mid-row a {
+        margin: 0;
+        font-size: 16px;
+    }
+    .footer-socials a img {
+        width: 30px;
+    }
+    .top-row .footer-logo {
+        width: 120px;
+    }
+}
 </style>

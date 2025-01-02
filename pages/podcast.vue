@@ -162,8 +162,8 @@
                 </div>
             </div> -->
         </div>
-        <div class="podcast-cta">
-            <h2>SUBSCRIBE TO US ON YOUR FAVOURITE PLATFORMS</h2>
+        <!-- <div class="podcast-cta">
+            <h2>LISTEN ON YOUR FAVOURITE PLATFORMS</h2>
             <div class="platforms">
                 <div class="platform">
                     <NuxtLink to="/">
@@ -172,7 +172,7 @@
                 </div>
                 <div class="platform">
                     <NuxtLink to="/">
-                        <img src="/icons/instagram.svg" alt="">
+                        <img src="/icons/youtube-red.svg" alt="">
                     </NuxtLink>
                 </div>
                 <div class="platform">
@@ -186,7 +186,7 @@
                     </NuxtLink>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- <Sponsors /> -->
         <Footer />
     </div>

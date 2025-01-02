@@ -11,10 +11,10 @@
                 <!-- <video  ref="introVideo" src="/video/hero-video2.mp4" @load="play()" autoplay loop muted>
                 </video> -->
                 <div class="video-prev-cont">
-                   <img src="/images/community-hangout.jpeg" class="video-preview-img" alt="Our community hangout">
+                    <img src="/images/community-hangout.jpeg" class="video-preview-img" alt="Our community hangout">
                     <!-- <div class="video-prev-overlay"></div>  -->
                 </div>
-                
+
                 <!-- <div class="play-btn" @click="play()">
                     <img src="/icons/green-play.svg" alt="Play">
                 </div> -->
@@ -28,10 +28,12 @@
                 <!-- <h1>Ready to <span class="green-txt">start</span>, <span class="green-txt">grow</span> and <span
                         class="green-txt">scale</span> your career in tech?</h1> -->
                 <h1>
-                    We create <span class="green-txt">digital media</span> that brings <span class="green-txt">The Good</span> news to the <span class="green-txt">World!</span> 
+                    We create <span class="green-txt">digital media</span> that brings <span class="green-txt">The
+                        Good</span> news to the <span class="green-txt">World!</span>
                 </h1>
                 <p class="hero-description">
-                    We tell stories that amplify God's love and Christian values through creative, high-quality media content that resonates with modern audiences worldwide.
+                    We tell stories that amplify God's love and Christian values through creative, high-quality media
+                    content that resonates with modern audiences worldwide.
                 </p>
 
                 <!-- <NuxtLink to="/" class="cta-join-text">
@@ -111,17 +113,19 @@
                 </div>
             </div>
         </div> -->
-       
+
         <div class="our-programs">
             <div class="programs-top-sect">
                 <div class="lhs-programs">
                     <p class="green-pill">
-                         
+
                     </p>
                     <h2>Our Programs</h2>
                 </div>
                 <div class="rhs-programs">
-                    <p>Content crafted for believers worldwide: from daily devotionals to the inspiring Yours Deeply Podcast and many faith-filled films, our programs uplift hearts and guide lives with God’s Word and wisdom.</p>
+                    <p>Content crafted for believers worldwide: from daily devotionals to the inspiring Yours Deeply
+                        Podcast and many faith-filled films, our programs uplift hearts and guide lives with God’s Word
+                        and wisdom.</p>
                 </div>
             </div>
             <div class="all-programs">
@@ -215,7 +219,7 @@
                         </div>
                         <img src="/images/podcast.jpg" alt="The Digital Dispatch Podcast">
                     </div>
-                    
+
                     <!-- <div class="program right">
                         <div class="program-name">
                             <p class="green-pill">Coming Soon</p>
@@ -254,38 +258,45 @@ const play = async () => {
     margin: 2vh auto;
     /* background-color: aquamarine; */
 }
+
 .video-prev-cont {
     height: 100%;
-    width: 100%; 
+    width: 100%;
     position: relative;
 }
+
 .studio-name {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     /* background: rebeccapurple; */
-    font-family: 'Clash Display';
+    margin-top: 2vh;
+}
+
+.studio-name p {
+    font-family: 'ClashDisplay-Semibold';
     font-style: normal;
     font-weight: 600;
-    font-size: 120px;
-    /* font-size: 7.5rem; */
+    font-size: clamp(1rem, 8vw, 7.5rem);
     line-height: 100%;
     color: #000000;
-    margin-top: 3vh;
 }
+
 .figtree-silohouette {
     height: 120px;
 }
+
 .video-prev-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.14); 
+    background-color: rgba(0, 0, 0, 0.14);
     z-index: 1;
 }
+
 .video-preview-img {
     object-fit: cover;
     object-position: center;
@@ -334,7 +345,7 @@ const play = async () => {
 }
 
 .hero-text-content h1 {
-    color:  #1A1A1A;
+    color: #1A1A1A;
     text-align: center;
     font-size: 64px;
     font-style: normal;
@@ -422,6 +433,7 @@ const play = async () => {
     align-items: center;
     justify-content: center;
 }
+
 .feature h3 {
     color: #1A1A1A;
     font-size: 20px;
@@ -563,6 +575,7 @@ const play = async () => {
     width: 100%;
     transition: all .5s;
 }
+
 .program-name:hover {
     background-color: rgba(0, 0, 0, 0.674);
 }
@@ -585,5 +598,121 @@ const play = async () => {
     object-fit: cover;
     object-position: center;
     display: block;
+}
+
+@media screen and (max-width: 1200px) {
+    .figtree-silohouette {
+        height: 100px;
+    }
+
+    .hero-text-content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .figtree-silohouette {
+        height: 80px;
+    }
+
+    .hero-text-content h1 {
+        font-size: 55px;
+    }
+
+    .programs-top-sect {
+        flex-direction: column;
+    }
+
+    .lhs-programs h2 {
+        font-size: 45px;
+    }
+
+    .rhs-programs {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .auto-scroll-programs {
+        gap: 15px;
+    }
+
+    .program {
+        height: 250px;
+        min-width: 400px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .figtree-silohouette {
+        height: 60px;
+    }
+
+    .hero-text-content h1 {
+        font-size: 50px;
+    }
+
+    .hero-description {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .rhs-programs {
+        font-size: 20px;
+    }
+
+    .program-name p:last-of-type {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .figtree-silohouette {
+        height: 40px;
+    }
+
+    .hero-text-content h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .hero-text-content {
+        width: 100%;
+        margin: 20vh auto 20vh;
+    }
+
+    .hero-description {
+        width: 95%;
+        font-size: 18px;
+    }
+
+    .lhs-programs h2 {
+        font-size: 30px;
+    }
+
+    .rhs-programs {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .auto-scroll-programs {
+        gap: 10px;
+    }
+
+    .program {
+        height: 200px;
+        min-width: 350px;
+    }
+
+    .program.left {
+        animation: scrollLeft 30s linear infinite;
+    }
+
+    .program.right {
+        animation: scrollRight 30s linear infinite;
+    }
+
+    .program-name p:last-of-type {
+        font-size: 22px;
+    }
 }
 </style>

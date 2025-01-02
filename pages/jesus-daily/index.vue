@@ -12,9 +12,11 @@
                     worship and study of the Word of God. It is led by believers from all over the world inspired by the
                     <span class="green-txt">Holy Spirit</span>.
                 </p>
-                <button class="green-round-btn">
-                    Want to lead a devotional?
-                </button>
+                <NuxtLink to="/jesus-daily/reservation">
+                    <button class="green-round-btn">
+                        Lead a devotional
+                    </button>
+                </NuxtLink>
             </div> 
         </div>
         <div class="featured-episodes-sect">
@@ -70,7 +72,7 @@
             </div>
         </div>
 
-        <NuxtLink to="/" class="cta-join-text">
+        <NuxtLink to="/jesus-daily/reservation" class="cta-join-text">
             Inspire others to draw closer to God.
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect opacity="0.01" y="24" width="24" height="24" transform="rotate(-90 0 24)" fill="#00BF63" />
@@ -85,25 +87,25 @@
             <h2>FOLLOW JESUS DAILY ON SOCIAL MEDIA</h2>
             <div class="platforms">
                 <div class="platform">
-                    <NuxtLink to="/podcast">
-                        <img src="/icons/apple-music.svg" alt="">
+                    <NuxtLink to="/">
+                        <img src="/icons/twitter-x.svg" alt="">
                     </NuxtLink>
                 </div>
                 <div class="platform">
                     <NuxtLink to="/">
-                        <img src="/icons/apple-podcast.svg" alt="">
+                        <img src="/icons/instagram-social.svg" alt="">
                     </NuxtLink>
                 </div>
                 <div class="platform">
                     <NuxtLink to="/">
-                        <img src="/icons/spotify.svg" alt="">
+                        <img src="/icons/tiktok.svg" alt="">
                     </NuxtLink>
                 </div>
-                <div class="platform">
+                <!-- <div class="platform">
                     <NuxtLink to="/">
-                        <img src="/icons/google-podcast.svg" alt="">
+                        <img src="/icons/youtube-red.svg" alt="">
                     </NuxtLink>
-                </div>
+                </div> -->
             </div>
         </div>
         <Footer />
@@ -211,7 +213,7 @@ const currentHoverElem = ref()
     /* background-color: rebeccapurple; */
 }
 .podcast-cta {
-    margin-top: 10vh;
+    margin-top: 20vh;
 }
 
 .featured-episodes-sect h2,
