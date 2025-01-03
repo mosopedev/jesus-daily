@@ -11,13 +11,10 @@
                 <!-- <video  ref="introVideo" src="/video/hero-video2.mp4" @load="play()" autoplay loop muted>
                 </video> -->
                 <div class="video-prev-cont">
-                    <img src="/images/community-hangout.jpeg" class="video-preview-img" alt="Our community hangout">
-                    <!-- <div class="video-prev-overlay"></div>  -->
+                    <!-- <img src="/images/community-hangout.jpeg" class="video-preview-img" alt="Our community hangout"> -->
+                    <img src="/images/home-hero3.jpg" class="video-preview-img" alt="Our community hangout">
                 </div>
 
-                <!-- <div class="play-btn" @click="play()">
-                    <img src="/icons/green-play.svg" alt="Play">
-                </div> -->
             </div>
             <!-- <div class="studio-name">
                 <p>FIGTREE</p>
@@ -247,9 +244,15 @@
 
 
 <script setup>
-const play = async () => {
-    this.$refs.introVideo.play()
-}
+useHead({
+    title: 'Home - Figtree Studios',
+    meta: [
+      {
+        name: 'description',
+        content: 'A production studio creating digital content that brings The Good news to the World!'
+      }
+    ]
+  })
 </script>
 
 <style scoped>
@@ -532,7 +535,6 @@ const play = async () => {
     overflow: hidden;
     display: inline-block;
     transform-style: preserve-3d;
-    cursor: pointer;
 }
 
 .program.left {

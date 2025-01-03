@@ -71,11 +71,9 @@ const isLoading = ref(true);
 onMounted(async () => {
     try {
         const response = await axios.get(`https://jesus-daily-api.onrender.com/api/devotional/${reservationId}`);
-        console.log('Devotional:', response.data);
         devotional.value = response.data.data;
         isLoading.value = false;
 
-        console.log('Devotional:', devotional.value);
 
         if (devotional.value.approved) {
             $toast.open({
@@ -101,7 +99,6 @@ onMounted(async () => {
                     window.location.href = '/jesus-daily/reservation';
                 },
             });
-        console.error('Error fetching devotional:', error);
     }
 });
 definePageMeta({
@@ -146,7 +143,6 @@ const uploadVideo = async () => {
                 'Content-Type': 'multipart/form-data',
             },
         });
-        console.log('Upload successful:', response.data);
         $toast.open({
             message: 'Video uploaded successfully!',
             type: 'success',
@@ -154,7 +150,6 @@ const uploadVideo = async () => {
         });
         window.location.reload();
     } catch (error) {
-        console.error('Error uploading video:', error);
         $toast.open({
             message: error.response.data.errors || 'Failed to upload video.',
             type: 'error',

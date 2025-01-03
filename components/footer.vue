@@ -18,16 +18,13 @@
             </div>
         </div>
         <div class="mid-row">
-            <!-- <NuxtLink to="/" class="footer-link">
-                Terms of Conditions
-            </NuxtLink> -->
-            <NuxtLink to="/" class="footer-link">
+            <NuxtLink to="/privacy-policy" class="footer-link">
                 Privacy Policy
             </NuxtLink>
-            <NuxtLink to="/" class="footer-link">
+            <NuxtLink to="mailto:hello@figtreestudios.com?subject=Partnership%20Inquiry" class="footer-link">
                 Partnerships
             </NuxtLink>
-            <NuxtLink to="/" class="footer-link">
+            <NuxtLink to="mailto:hello@figtreestudios.com" class="footer-link">
                 Contact
             </NuxtLink>
         </div>
@@ -45,7 +42,6 @@
 
 <style scoped>
 footer {
-    /* border-top: 1px solid #D2D2D2; */
     margin-top: 30vh;
     padding: 30px 20px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.047);

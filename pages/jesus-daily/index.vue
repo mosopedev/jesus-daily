@@ -23,7 +23,7 @@
             <!-- <h2>FEATURED EPISODES</h2> -->
             <div class="featured-episodes">
                 <div class="episode" @mouseover="currentHoverElem = 1" @mouseout="currentHoverElem = ''">
-                    <video class="episode-bg"
+                    <video playsinline webkit-playsinline class="episode-bg"
                         src="https://res.cloudinary.com/knjbnf-jbdusn/video/upload/v1735448227/Figtree%20Studios/abbzsaetsu7denssso6q.mp4"
                         autoplay loop muted></video>
                     <div class="episode-overlay">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="episode" @mouseover="currentHoverElem = 2" @mouseout="currentHoverElem = ''">
-                    <video class="episode-bg"
+                    <video playsinline webkit-playsinline class="episode-bg"
                         src="https://res.cloudinary.com/knjbnf-jbdusn/video/upload/v1735448227/Figtree%20Studios/kg3ocsbzmywnqnr6qaad.mp4"
                         autoplay loop muted></video>
                     <div class="episode-overlay">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="episode" @mouseover="currentHoverElem = 3" @mouseout="currentHoverElem = ''">
-                    <video class="episode-bg"
+                    <video playsinline webkit-playsinline class="episode-bg"
                         src="https://res.cloudinary.com/knjbnf-jbdusn/video/upload/v1735448227/Figtree%20Studios/k8r9zuj2tnqf2zjmhkkt.mp4"
                         autoplay loop muted></video>
                     <div class="episode-overlay">

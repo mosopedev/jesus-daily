@@ -13,7 +13,8 @@
         <p class="modal-title">Devotional Guide</p>
         <p class="selected-date">Date: {{ new Date(selectedDevotional.allotedDate).toLocaleDateString('en-GB', {
           year:
-            'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }) }}</p>
+            'numeric', month: 'short', day: 'numeric', timeZone: 'UTC'
+        }) }}</p>
 
         <div class="devotional-info">
           <div class="dev-info-txt-grp">
@@ -131,6 +132,9 @@ definePageMeta({
 
 import { ref } from 'vue';
 import axios from 'axios';
+import { useToast } from 'vue-toast-notification';
+import 'vue-toast-notification/dist/theme-sugar.css';
+const $toast = useToast();
 
 const reserverFirstname = typeof window !== 'undefined' ? ref(localStorage.getItem('reserverFirstname')) : ref('')
 const reserverLastname = typeof window !== 'undefined' ? ref(localStorage.getItem('reserverLastname')) : ref('')
@@ -188,7 +192,7 @@ const generateCalendar = async () => {
     isLoading.value = false;
   } catch (error) {
     isLoading.value = false;
-    console.error('Error fetching devotional:', error);
+
   }
   calendarDays.value = days;
 };
@@ -201,8 +205,8 @@ const findDevotionalByDate = (day) => {
 
   const targetDate = `${selectedYear.value}-${String(selectedMonth.value + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
   const foundDevotional = devotionals.find(dev => dev.allotedDate.startsWith(targetDate));
-  // console.log(foundDevotional)
-  // console.log('Selected Devotional:', selectedDevotional.value);
+
+
   return foundDevotional ? foundDevotional.isReserved : null;
   // return foundDevotional?.isReserved || false;
 }
@@ -233,20 +237,32 @@ const reserveDevotional = async () => {
       email: reserverEmail.value,
     });
 
-    if (response.data.success) {
-      if (saveReserverDetails.value) {
-        localStorage.setItem('reserverFirstname', reserverFirstname.value);
-        localStorage.setItem('reserverLastname', reserverLastname.value);
-        localStorage.setItem('reserverEmail', reserverEmail.value);
-      }
-      alert('Devotional reserved successfully!');
-      await generateCalendar();
-      showReserverModal.value = false;
-    } else {
-      alert('Failed to reserve devotional.');
+    // if (response.data.success) {
+    if (saveReserverDetails.value) {
+      localStorage.setItem('reserverFirstname', reserverFirstname.value);
+      localStorage.setItem('reserverLastname', reserverLastname.value);
+      localStorage.setItem('reserverEmail', reserverEmail.value);
     }
+    $toast.open({
+      message: 'Devotional reserved successfully!',
+      type: 'success',
+      position: 'top-right',
+    });
+    await generateCalendar();
+    showReserverModal.value = false;
+    // } else {
+    //   $toast.open({
+    //         message: error.response.data.errors || 'Failed to reserve devotional. Please try again.',
+    //         type: 'error',
+    //         position: 'top-right',
+    //     });
+    // }
   } catch (error) {
-    console.log('Error reserving devotional:', error);
+    $toast.open({
+      message: error.response.data.errors || 'Failed to reserve devotional. Please try again.',
+      type: 'error',
+      position: 'top-right',
+    });
   }
 }
 </script>
