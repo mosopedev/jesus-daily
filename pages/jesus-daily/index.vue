@@ -473,5 +473,11 @@ const currentHoverElem = ref()
     .green-pill {
         font-size: 16px;
     }
+
+    .episode {
+        width: 75%;
+        height: 450px;
+        margin: 10px;
+    }
 }
 </style>
