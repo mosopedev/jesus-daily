@@ -181,7 +181,7 @@ const generateCalendar = async () => {
   }
 
   try {
-    const response = await axios.get(`http://localhost:4002/api/devotional/${year}/${month + 1}`);
+    const response = await axios.get(`https://jesus-daily-api.onrender.com/api/devotional/${year}/${month + 1}`);
     devotionals = response.data.data || [];
     isLoading.value = false;
   } catch (error) {
@@ -225,7 +225,7 @@ updateSelectedDay(selectedDay.value)
 
 const reserveDevotional = async () => {
   try {
-    const response = await axios.post('http://localhost:4002/api/devotional/reserve', {
+    const response = await axios.post('https://jesus-daily-api.onrender.com/api/devotional/reserve', {
       devotionalId: selectedDevotional.value._id,
       firstname: reserverFirstname.value,
       lastname: reserverLastname.value,

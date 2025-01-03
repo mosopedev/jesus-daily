@@ -67,7 +67,7 @@ const isLoading = ref(true);
 
 onMounted(async () => {
     try {
-        const response = await axios.get(`http://localhost:4002/api/devotional/${reservationId}`);
+        const response = await axios.get(`https://jesus-daily-api.onrender.com/api/devotional/${reservationId}`);
         console.log('Devotional:', response.data);
         devotional.value = response.data.data;
         isLoading.value = false;
@@ -128,7 +128,7 @@ const uploadVideo = async () => {
     formData.append('devotionalId', reservationId);
 
     try {
-        const response = await axios.post('http://localhost:4002/api/devotional/upload', formData, {
+        const response = await axios.post('https://jesus-daily-api.onrender.com/api/devotional/upload', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
