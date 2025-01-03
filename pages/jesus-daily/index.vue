@@ -93,17 +93,17 @@
             <h2>FOLLOW JESUS DAILY ON SOCIAL MEDIA</h2>
             <div class="platforms">
                 <div class="platform">
-                    <NuxtLink to="/">
+                    <NuxtLink to="https://x.com/jesus_daily_org">
                         <img src="/icons/twitter-x.svg" alt="">
                     </NuxtLink>
                 </div>
                 <div class="platform">
-                    <NuxtLink to="/">
+                    <NuxtLink to="https://www.instagram.com/jesus.daily.devotional/">
                         <img src="/icons/instagram-social.svg" alt="">
                     </NuxtLink>
                 </div>
                 <div class="platform">
-                    <NuxtLink to="/">
+                    <NuxtLink to="https://www.tiktok.com/@jesus.daily.devotional">
                         <img src="/icons/tiktok.svg" alt="">
                     </NuxtLink>
                 </div>
