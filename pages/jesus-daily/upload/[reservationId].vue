@@ -5,6 +5,9 @@
             <div v-if="isLoading" class="loader">
                 <img src="/icons/loader-animation.svg"alt="">
             </div>
+            <p v-if="!isLoading && devotional === null" class="message">
+                No devotional found for this date.
+            </p>
             <div v-if="devotional" class="devotion-content">
                 <p class="modal-title">Devotional Guide</p>
                 <p class="selected-date">Date: {{ new Date(devotional.allotedDate).toDateString() }}</p>
@@ -88,6 +91,16 @@ onMounted(async () => {
         }
     } catch (error) {
         isLoading.value = false;
+        $toast.open({
+                message: error.response.data.errors || 'An error occurred. Please try again later.',
+                type: 'error',
+                position: 'top-right',
+                duration: 5000,
+                dismissible: true,
+                onDismiss: () => {
+                    window.location.href = '/jesus-daily/reservation';
+                },
+            });
         console.error('Error fetching devotional:', error);
     }
 });

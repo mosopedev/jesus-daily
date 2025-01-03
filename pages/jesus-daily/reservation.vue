@@ -53,7 +53,7 @@
         <div class="devotional-schedule">
           <div class="day-name" v-for="day in daysOfWeek" :key="day">{{ day }}</div>
           <div class="day-circle" v-for="(day, index) in calendarDays" :key="index"
-            :class="{ empty: day === null, selected: day === selectedDay, reserved: findDevotionalByDate(day) == true }"
+            :class="{ empty: day === null || findDevotionalByDate(day) === null, selected: day === selectedDay, reserved: findDevotionalByDate(day) == true }"
             @click="updateSelectedDay(day)">
             {{ day || '' }}
             <p>
@@ -152,7 +152,8 @@ const years = Array.from({ length: 10 }, (_, i) => currentYear + i); // Last 5 a
 
 const selectedYear = ref(currentYear);
 const selectedMonth = ref(new Date().getMonth());
-const selectedDay = ref(new Date().getDate())
+const selectedDay = ref(new Date().getDate());
+
 
 const calendarDays = ref([]);
 
@@ -183,12 +184,12 @@ const generateCalendar = async () => {
   try {
     const response = await axios.get(`https://jesus-daily-api.onrender.com/api/devotional/${year}/${month + 1}`);
     devotionals = response.data.data || [];
+    updateSelectedDay(selectedDay.value)
     isLoading.value = false;
   } catch (error) {
     isLoading.value = false;
     console.error('Error fetching devotional:', error);
   }
-
   calendarDays.value = days;
 };
 
@@ -218,7 +219,7 @@ const updateSelectedDay = (day) => {
   const targetDate = `${selectedYear.value}-${String(selectedMonth.value + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
   const foundDevotional = devotionals.find(dev => dev.allotedDate.startsWith(targetDate));
   selectedDevotional.value = foundDevotional;
-  selectedDevotional.value = foundDevotional
+  // selectedDevotional.value = foundDevotional
 }
 
 updateSelectedDay(selectedDay.value)
@@ -410,8 +411,9 @@ h1 {
 }
 
 .day-circle.empty {
-  background-color: rgba(245, 245, 245, 0.565);
+  background-color: rgba(245, 245, 245, 0.343);
   cursor: not-allowed;
+  color: lightgray;
 }
 
 .day-circle.selected {
